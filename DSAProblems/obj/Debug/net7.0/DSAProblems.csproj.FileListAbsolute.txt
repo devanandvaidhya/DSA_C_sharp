@@ -1,0 +1,15 @@
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\bin\Debug\net7.0\DSAProblems.exe
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\bin\Debug\net7.0\DSAProblems.deps.json
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\bin\Debug\net7.0\DSAProblems.runtimeconfig.json
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\bin\Debug\net7.0\DSAProblems.dll
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\bin\Debug\net7.0\DSAProblems.pdb
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.csproj.AssemblyReference.cache
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.GeneratedMSBuildEditorConfig.editorconfig
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.AssemblyInfoInputs.cache
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.AssemblyInfo.cs
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.csproj.CoreCompileInputs.cache
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.dll
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\refint\DSAProblems.dll
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.pdb
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\DSAProblems.genruntimeconfig.cache
+D:\Interview Preparation\DSA\DSAProblems\DSAProblems\obj\Debug\net7.0\ref\DSAProblems.dll
