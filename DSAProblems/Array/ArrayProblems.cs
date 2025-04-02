@@ -188,6 +188,136 @@ namespace DSAProblems.Array
 
         }
 
+
+        // Move all zero to end
+
+        public void MoveZeroToEnd()
+        {
+            int[] arr = { 3, 0, 4, 0, 1, 3, 0, 8, 3 };
+            int j = -1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 0)
+                {
+                    j = i;
+                    break;
+                }
+            }
+            if (j == -1)
+            {
+                Console.WriteLine("Array is non zero");
+            }
+
+            for (int i = j + 1; i < arr.Length; i++)
+            {
+                if (arr[i] != 0)
+                {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                    j++;
+                }
+            }
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Now array is : "+ arr[i]);
+            }
+        }
+
+        // linear search in array
+
+        public void LSearch()
+        {
+            int[] arr = { 2, 3, 5, 7, 9, 10, 15 };
+            int value = 5;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == value)
+                {
+                    Console.WriteLine("value is :" + arr[i] + " and located at " + i);
+                }
+            }
+        }
+
+        // Union of two sorted array
+        public void UnionTwoArray()
+        {
+            int[] arr = {1,1,2,3,3,4,5 };
+            int[] arr1 = {1,2,4,5 ,6};
+            List<int> union = new List<int>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (!union.Contains(arr[i]))
+                {
+                    union.Add(arr[i]);
+                }
+            }
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                if (!union.Contains(arr1[i]))
+                {
+                    union.Add(arr1[i]);
+                }
+            }
+
+            for (int i = 0; i < union.Count; i++)
+            {
+                Console.WriteLine("Union array is : "+ union[i]);
+            }
+        }
+
+
+        // Intersection of two sorted array
+
+        public void IntersectTwoArray()
+        { 
+        
+        }
+
+        // Finding missing number in an array
+
+        public void MissingNumber()
+        {
+            int[] arr = { 1, 2, 4, 5 };
+            int sum = 0;
+            int n = arr.Length + 1; // because one missing number
+            sum = n * (n + 1) / 2;
+            //sum = arr.Length * (arr.Length + 1) / 2;
+            int actualSum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                actualSum += arr[i];
+            }
+            int missingNumber =   sum- actualSum;
+            Console.WriteLine("Missing number is " + missingNumber);
+        }
+
+        // Maximum consecutive ones
+
+        public void MaxConsecutiveOnes()
+        {
+            int[] arr = { 1, 1, 0, 1, 1, 1, 0, 1, 1 };  // 1,1,1 max consecutive one is three
+
+            int count = 0;
+            int maxones = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == 1)
+                {
+                    count++;
+                    maxones = maxones > count ? maxones : count;
+                }
+                else
+                {
+                    count = 0;
+                }
+            }
+
+            Console.WriteLine("Maximum consecutive one's in the array is : "+ maxones);
+        }
     }
 
 

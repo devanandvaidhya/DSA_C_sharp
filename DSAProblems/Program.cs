@@ -10,3 +10,8 @@ arrayProblems.chkIsSort();
 arrayProblems.Removeduplicate();
 arrayProblems.LeftRotatebyOne();
 arrayProblems.LeftRotateByDPlace();
+arrayProblems.MoveZeroToEnd();
+arrayProblems.LSearch();
+arrayProblems.UnionTwoArray();
+arrayProblems.MissingNumber();
+arrayProblems.MaxConsecutiveOnes();
