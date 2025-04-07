@@ -318,6 +318,88 @@ namespace DSAProblems.Array
 
             Console.WriteLine("Maximum consecutive one's in the array is : "+ maxones);
         }
+
+        // Find the number that appears once and other number twice
+        // uing xor preoperty
+        // 0^0=0, 1^1=0,3^3=0 but 1^2=2 right hand element will be return
+        public void findAppearsOnce()
+        {
+            int[] arr = { 1, 1, 2,2,  3, 4, 4, 5, 5 };
+            int xor = 0;
+            for (int i = 0; i < arr.Length; i++)
+            { 
+                xor=xor^ arr[i];
+            }
+
+            Console.WriteLine("Element which is appears once is : " + xor);
+        }
+
+        // Longest subarray with given sum(Positive)
+        // means longest subarray with sum k positive
+        // subarray means contigious part of the array
+        //Longest Sub-Array with Sum K 
+
+        public void LongestSubArraySumK()
+        {
+            int[] arr = { 1, 2, 3, -1, 1, 1, 1 };
+            int k = 5;
+            Dictionary<int, int> prefixsumMap = new Dictionary<int, int>();
+            int maxlenght = 0;
+            int prefixSum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                prefixSum += arr[i];
+
+                if (prefixSum == k)
+                {
+                    maxlenght = i + 1;
+                }
+                if (prefixsumMap.ContainsKey(prefixSum - k))
+                { 
+                    int prevIndex= prefixsumMap[prefixSum - k];
+                    maxlenght = Math.Max(maxlenght, i - prevIndex);
+                }
+
+                if (!prefixsumMap.ContainsKey(prefixSum))
+                {
+                    prefixsumMap[prefixSum] = i;
+                }
+            }
+            Console.WriteLine("Longest Sub-Array with Sum K lenght is  : " + maxlenght);
+
+        }
+
+        // 2 sum problem
+
+        public void twoSum()
+        {
+            //int[] arr = { 2, 7, 11, 15 };
+            List<int> arr = new List<int> { 2, 7, 11, 15 };
+            arr.Sort();
+            int target = 9;
+            int left = 0;
+            int right = arr.Count - 1;
+         
+
+            while(left<right)
+            {
+                int sum = arr[left] + arr[right];
+                if (sum == target)
+                {
+                    Console.WriteLine("Sum of two number is : " + sum + " and location at " +left + " " +right);
+                    break;
+                }
+                else if (sum < target)
+                {
+                    left++;
+                }
+                else
+                {
+                    right--;
+                }
+
+            }
+        }
     }
 
 

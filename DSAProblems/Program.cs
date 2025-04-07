@@ -15,3 +15,6 @@ arrayProblems.LSearch();
 arrayProblems.UnionTwoArray();
 arrayProblems.MissingNumber();
 arrayProblems.MaxConsecutiveOnes();
+arrayProblems.findAppearsOnce();
+arrayProblems.LongestSubArraySumK();
+arrayProblems.twoSum();
