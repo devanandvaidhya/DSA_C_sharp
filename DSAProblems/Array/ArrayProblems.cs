@@ -400,6 +400,96 @@ namespace DSAProblems.Array
 
             }
         }
+
+        // Sort an array 0's , 1's and 2's 
+
+        public void Sortzersoonestwos()
+        {
+            int[] arr = { 0, 1, 2, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
+            int low = 0, mid = 0, high = arr.Length - 1;
+            while (mid <= high) 
+            {
+                if (arr[mid] == 0)
+                {
+                    Swap(arr, low, mid);
+                      low++;
+                    mid++;
+                }
+                else if (arr[mid] == 1)
+                {
+                    mid++;
+                }
+                else
+                {
+                    Swap(arr, mid, high);
+                    high--;
+                }
+            }
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("sorted : " + arr[i]);
+            }
+        }
+
+        private static void Swap(int[] arr, int i, int j)
+        {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+
+        // Majority element N/2
+
+        public void MajorityElement()
+        {
+            int[] arr = { 2, 2, 3, 3, 1, 2, 2 };
+            Dictionary<int,int> count = new Dictionary<int, int>();
+            int majorityCount = arr.Length / 2;
+            bool flag = false;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (!count.ContainsKey(arr[i]))
+                {
+                    count[arr[i]] = 0;
+                }
+                count[arr[i]]++;
+                if (count[arr[i]] > majorityCount)
+                {
+                    flag = true;
+                    Console.WriteLine("Majority element is : " + arr[i]);
+                    break;
+                }
+            }
+            if (!flag)
+            { 
+            Console.WriteLine("No majority element");
+            }
+        }
+
+
+        // Maximum subarray sum using kadane's algorithm
+        // if sam <0 then make the sum zero
+        public void MaxSubarray()
+        {
+            int[] arr = { -2, -3, 4, -1, -2, 1, 5, -3 };
+            int sum = 0;
+            int max = int.MinValue;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum = sum + arr[i];
+                if (sum > max)
+                {
+                    max = sum;
+                }
+
+                if(sum<0)
+                {
+                    sum = 0;
+                }
+            }
+            Console.WriteLine("Maximum subarray sum is : "+ (max>sum?max:sum));
+        }
+
     }
 
 

@@ -18,3 +18,6 @@ arrayProblems.MaxConsecutiveOnes();
 arrayProblems.findAppearsOnce();
 arrayProblems.LongestSubArraySumK();
 arrayProblems.twoSum();
+arrayProblems.Sortzersoonestwos();
+arrayProblems.MajorityElement();
+arrayProblems.MaxSubarray();
