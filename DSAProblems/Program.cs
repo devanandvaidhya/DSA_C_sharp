@@ -21,3 +21,8 @@ arrayProblems.twoSum();
 arrayProblems.Sortzersoonestwos();
 arrayProblems.MajorityElement();
 arrayProblems.MaxSubarray();
+arrayProblems.RearrangeArrayPosNeg();
+arrayProblems.BuySellStock();
+arrayProblems.NextPermutation();
+arrayProblems.LeaderinArray();
+

@@ -490,6 +490,132 @@ namespace DSAProblems.Array
             Console.WriteLine("Maximum subarray sum is : "+ (max>sum?max:sum));
         }
 
+        // Rearranging the   array in alternating positive and negative items
+        // exa re-arrange element in alternative position by sign (-1,3,-5,8)
+
+        public void RearrangeArrayPosNeg()
+        {
+            int[] arr = { 3, 1, -2, -5, 2, -4 };
+            int[] ans = new int[arr.Length];
+
+            int posIndex = 0;
+            int negIndex = 1;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > 0)
+                {
+                    ans[posIndex] = arr[i];
+                    posIndex += 2;
+                }
+                else
+                {
+                    ans[negIndex] = arr[i];
+                    negIndex += 2;
+                }
+
+            }
+
+            for (int i = 0; i < ans.Length; i++)
+            {
+            Console.WriteLine("Re-arrange array is : " + ans[i]);
+            }
+        }
+
+        // Best price to buy and sell stock
+
+        public void BuySellStock()
+        {
+            int[] arr = { 7, 1, 5, 3, 6 ,4};
+            int buyMinimum = arr[0];
+            int maxProfit = 0;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                int cost = arr[i] - buyMinimum;
+                maxProfit = Math.Max(maxProfit, cost);
+                buyMinimum = Math.Min(buyMinimum, arr[i]);
+            }
+            Console.WriteLine("Maximum profit on "+ maxProfit);
+
+        }
+
+
+        // Next permutation
+
+        public void NextPermutation()
+        {
+            int[] arr = { 1, 2, 3,4 };
+
+            int gola_index = -1;
+            int n = arr.Length;
+            for (int i = n - 1; i > 0; i--)
+            {
+                if (arr[i] > arr[i - 1])
+                {
+                    gola_index = i - 1;
+                    break;
+                }
+            }
+
+            if (gola_index != -1)
+            {
+                int swap_Index = gola_index;
+                for (int j = n - 1; j >= gola_index + 1; j--)
+                {
+                    if (arr[j] > arr[gola_index])
+                    {
+                        swap_Index = j;
+                        break;
+                    }
+                }
+                Swap(arr, gola_index, swap_Index);
+            }
+            Reverse(arr, gola_index + 1, arr.Length - 1);
+            
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine("Next permutation is " + arr[i]);
+            }
+        }
+
+        private  void Reverse(int[] nums, int start, int end)
+        {
+            while (start < end)
+            {
+                Swap(nums, start, end);
+                start++;
+                end--;
+            }
+        }
+
+        // Leader in an array
+
+        // [10,22,12,3,0,6] => [22,12,6] 
+        // note : check to the right hand side should not be greater than currnet/itself
+        public void LeaderinArray()
+        {
+            int[] arr = { 10, 22, 12, 3, 0, 6 };
+            //int[] ans = new int[arr.Length];
+            List<int> ans = new List<int>();
+
+            int max = int.MinValue;
+            for (int i = arr.Length - 1; i > 0; i--)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                    ans.Add(arr[i]);
+                }
+            }
+
+            ans.Sort();
+            for (int i = 0; i < ans.Count; i++)
+            {
+                Console.WriteLine("Leaders in an array : "+ ans[i]);
+            }
+        }
+
     }
 
 
