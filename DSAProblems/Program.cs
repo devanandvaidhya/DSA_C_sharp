@@ -25,4 +25,5 @@ arrayProblems.RearrangeArrayPosNeg();
 arrayProblems.BuySellStock();
 arrayProblems.NextPermutation();
 arrayProblems.LeaderinArray();
+arrayProblems.LongestConsecutiveSequence();
 

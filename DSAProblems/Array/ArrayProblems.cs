@@ -616,6 +616,36 @@ namespace DSAProblems.Array
             }
         }
 
+        // Longest Consecutive Sequence 
+        // [100, 4, 200, 1, 3, 2]  o/p => 4
+
+        public void LongestConsecutiveSequence()
+        {
+            int[] arr = { 100, 4, 200, 1, 3, 2,100 };
+
+            HashSet<int> longesthash = new HashSet<int>(arr);
+            int longest = 0;
+
+            foreach (int num in longesthash)
+            {
+                if (!longesthash.Contains(num - 1))
+                {
+                    int current = num;
+                    int count = 1;
+
+                    while (longesthash.Contains(current + 1))
+                    {
+                        current++;
+                        count++;
+                    }
+                    longest = Math.Max(longest, count);
+                }
+             
+            }
+
+            Console.WriteLine("Longest Consecutive Sequence is :  " + longest);
+        }
+
     }
 
 
